@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="65dp"
+    >
+    
+    
+    <ImageView
+        android:id="@+id/program_item_play_image"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:src="@drawable/program_unfocus"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_centerInParent="true"
+        />
+    
+   <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal"
+	    android:layout_centerVertical="true"
+	    >
+	    
+	    <ImageView
+	        android:id="@+id/program_icons"
+	        android:layout_width="77dp"
+	        android:layout_height="35dp"
+	        android:paddingLeft="10dp"
+	        android:layout_gravity="center_vertical"
+	        android:src="@drawable/icon_transport"
+	        />
+	    
+	   <TextView 
+	      android:id="@+id/program_item_name"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:textColor="@color/color_program"
+	      android:paddingTop="5dp"
+	      android:paddingBottom="5dp"
+	      android:singleLine="true"
+	      android:ellipsize="marquee"
+	      android:paddingLeft="20dp"
+	      style="@style/text_28_c0c0c0"
+	      />
+	      <!-- style="@style/text_32_f2f2f2" -->
+   </LinearLayout>
+
+</RelativeLayout>

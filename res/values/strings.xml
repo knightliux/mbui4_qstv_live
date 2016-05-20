@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iLive HK</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="determine">Determine</string>
+    <string name="cancel">Cancel</string>
+    <string name="exit">Eixt</string>
+    <string name="sure">Sure</string>
+    
+    <!-- welcome activity -->
+    <string name="prompt">Prompt</string>
+	<string name="network_exception">Fetching list failed, please try again later</string>
+	<string name="network_not_connect">Network connection failure, please check the network</string>
+	<string name="auth_fail">Authorization failed, please contact service provider</string>
+	<string name="content_is_null">The content is null</string>
+	
+	<!-- vod activity -->
+	<string name="no_vod">No drama</string>
+	<string name="load_fail">Load data fail</string>
+	
+    <!-- vod player-->
+    <string name="sprit">/</string>
+	<string name="duration">00:00:00</string>
+    <string name="retry">Retry</string>
+    <string name="not_look_vod">Are you sure to exit?</string>
+    <string name="no_program">No Program</string>
+    <string name="is_playing">Playing</string>
+    
+    <string name="softupdate">Soft update</string>
+    <string name="update">Update</string>
+    <string name="start_download">Start download apk background</string>
+    
+    <string name="check_auth">Check Authorization</string>
+    <string name="load_list">Load list</string>
+    <string name="ready_play">Ready play</string>
+    
+    <string name="signal_poor">Signal difference, please watch other programs</string>
+    <string name="exit_5s_later">Authorization failed, 5 seconds after exiting the application</string>
+   	
+	<string name="data_is_update">Data is update</string>
+    <string name="version">version </string>
+    <string name="load_player">Load Player</string>
+    <string name="program_title">Channel</string>
+    
+</resources>

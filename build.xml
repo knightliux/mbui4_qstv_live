@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     2015年3月18日 下午3:25:13                                                        
+
+     iLive    
+     
+                   
+     Administrator                                                                
+     ====================================================================== -->
+<project name="iLive" default="BuildAll">
+
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="BuildAll">
+        <antcall target="BuildMoonCpp"></antcall>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: depends                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="BuildMoonCpp">
+    	<javah destdir="./jni" classpath="./bin/classes" class="com.moon.ndk.URL"></javah>
+    </target>
+
+</project>

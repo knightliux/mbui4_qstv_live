@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">爱直播HK</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="determine">确定</string>
+    <string name="cancel">取消</string>
+    <string name="exit">退出</string>
+    <string name="sure">確定</string>
+    
+    <!-- welcome activity -->
+    <string name="prompt">提示</string>
+	<string name="network_not_connect">网络连接失败</string>
+	<string name="auth_fail">授权失败</string>
+	<string name="network_exception">取列表失败</string>
+	<string name="content_is_null">节目列表为空</string>
+	
+	<!-- vod activity -->
+	<string name="no_vod">无剧集</string>
+	<string name="load_fail">加载失败</string>
+	
+    <!-- vod player-->
+    <string name="sprit">/</string>
+	<string name="duration">00:00:00</string>
+    <string name="retry">重试</string>
+    <string name="not_look_vod">确定不再观看了吗?</string>
+    <string name="no_program">无节目</string>
+    <string name="is_playing">正在播放</string>
+    <string name="softupdate">软件更新</string>
+    <string name="update">更新</string>
+    <string name="start_download">开始后台下载安装APK</string>
+    
+    <string name="check_auth">检查授权</string>
+    <string name="load_list">加载列表</string>
+    <string name="ready_play">准备播放</string>
+    <string name="signal_poor">信号差，请观看其他节目</string>
+    <string name="exit_5s_later"> 授权失败了，5秒后將退出</string>
+    <string name="data_is_update">列表已更新</string>
+    <string name="version">版本号 </string>
+    <string name="load_player">加载播放器</string>
+    <string name="program_title">节目列表</string>
+</resources>

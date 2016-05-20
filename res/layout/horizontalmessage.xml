@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1280.0px"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <com.moon.android.live.custom007.view.HorizontalScrollTextView
+        android:id="@+id/messagetxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+         />
+
+</LinearLayout>

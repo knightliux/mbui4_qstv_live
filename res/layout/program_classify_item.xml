@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:minHeight="31dp"
+    >
+    
+    
+   <TextView 
+      android:id="@+id/program_item_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      style="@style/text_28_f2f2f2"
+      android:textColor="@color/color_program"
+      android:paddingTop="9dp"
+      android:paddingBottom="9dp"
+      android:singleLine="true"
+      android:ellipsize="marquee"
+      android:paddingLeft="10dp"
+      />
+
+</LinearLayout>

@@ -1,0 +1,396 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg" >
+
+    <com.moon.android.live.custom007.view.VideoView
+        android:id="@+id/main_videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <com.moon.android.live.custom007.view.GGTextView
+        android:id="@+id/marquee_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="false"
+        android:ellipsize="marquee"
+        android:focusable="false"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:nextFocusDown="@+id/frame_gg"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textSize="30dp" />
+
+    <!-- no sign osd start -->
+
+    <LinearLayout
+        android:id="@+id/osd_no_signal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/no_sign_prompt" />
+    </LinearLayout>
+    <!-- no sign osd end -->
+
+
+    <!-- network exception osd start -->
+
+    <LinearLayout
+        
+        android:id="@+id/osd_network_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/p_network_bg"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/p_prompt" />
+
+        <TextView
+            style="@style/text_42_f2f2f2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="@string/network_not_connect" />
+    </LinearLayout>
+    <!-- network exception osd end -->
+
+    <com.moon.android.live.custom007.view.LoadView
+        android:id="@+id/program_loadview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-70dp"
+        android:layout_marginTop="36dp"
+    
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/program_name_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/program_id"
+            style="@style/AudioFileInfoOverlayText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+        <!-- com.moonlivehk.android.iptv.view.StrokeText -->
+
+        <TextView
+            android:id="@+id/program_name"
+            style="@style/AudioFileInfoOverlayText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/program_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/black" >
+
+        <ImageView
+            android:id="@+id/program_ad_image"
+            android:layout_width="800dp"
+            android:layout_height="480dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/program_ad_countdown"
+            style="@style/text_42_f2f2f2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/black_half"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/click_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/main_program_list"
+        android:layout_width="430dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="35dp"
+        android:background="@drawable/program_list"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/main_program_arrow_top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/program_list"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/program_arr_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/program_arrow_left" />
+
+            <TextView
+                android:id="@+id/clssify_name"
+                style="@style/text_32_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/program_arr_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/program_arrow_lright" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="58dp"
+            android:layout_marginTop="54dp"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@+id/main_program_listview_classify"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/program_list"
+                android:divider="@color/white_10"
+                android:dividerHeight="1dp"
+                android:fastScrollEnabled="false"
+                android:layoutAnimation="@anim/navagation_gridview_anim"
+                android:listSelector="@drawable/bg_program"
+                android:nextFocusDown="@id/main_program_listview_classify"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/linearlayout_border"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_left" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/main_program_listview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:divider="@color/white_half"
+                android:dividerHeight="1dp"
+                android:layoutAnimation="@anim/navagation_gridview_anim"
+                android:listSelector="@drawable/bg_program"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_program_arrow_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/program_list" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/arrow_bottom"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/program_current_position"
+                    style="@style/text_30_c0c0c0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/program_all_num"
+                    style="@style/text_30_c0c0c0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/program_prompt"
+        style="@style/text_32_000000"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:gravity="bottom"
+        android:text="@string/signal_poor"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/volume_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <com.moon.android.live.custom007.view.CircularSeekBar
+            android:id="@+id/circle_seek_bar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/p_volume_bg" />
+    </RelativeLayout>
+
+    <!-- welcome page -->
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg" >
+
+        <TextView
+            android:id="@+id/versionname"
+            style="@style/text_24_f2f2f2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/vod_loading_img"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <com.moon.android.live.custom007.view.VodLoadAnimation
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/load_in_msg"
+                style="@style/text_24_f2f2f2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/load_player" />
+
+            <TextView
+                android:id="@+id/welcome_program_name"
+                style="@style/text_20_f2f2f2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <com.moon.android.live.custom007.view.MarqueeTextView
+            android:id="@+id/load_prompt"
+            style="@style/text_36_f2f2f2"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/reload_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="110dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/vod_button_reload"
+                style="@style/text_30_000000"
+                android:layout_width="202dp"
+                android:layout_height="62dp"
+                android:background="@drawable/btn_vod"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="10dp"
+                android:text="@string/retry" />
+
+            <Button
+                android:id="@+id/vod_button_exit"
+                style="@style/text_30_000000"
+                android:layout_width="202dp"
+                android:layout_height="62dp"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/btn_vod"
+                android:padding="10dp"
+                android:text="@string/exit" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

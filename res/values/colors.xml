@@ -1,0 +1,15 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="text_black">#666666</color>
+    <color name="text_white">#f2f2f2</color>
+    <color name="black">#000000</color>
+    <color name="black_half">#aa000000</color>
+    <color name="background">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="white">#f2f2f2</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_half">#30f2f2f2</color>
+	<color name="white_10">#10f2f2f2</color>
+	<color name="yellow">#f8d332</color>
+</resources>
